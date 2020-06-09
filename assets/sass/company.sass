@@ -1,0 +1,443 @@
+$cairo: 'Cairo', sans-serif
+$tajawal: 'Tajawal', sans-serif
+
+$green: #b0c154
+$snapchat: #fffc00
+$twitter: #1da1f2
+$instagram: #c13584
+$turkey: #E30A17
+
+//$green: #4EA05B
+$red: #CF2127
+$yellow: #FFC107
+a
+  text-decoration: none
+
+ul
+  margin: 0px
+  padding: 0px
+  list-style: none
+
+p,h2,h1
+  margin: 0px
+
+body, html
+  padding: 0px
+  margin: 0px
+
+.header-container
+  z-index: 2
+
+.body-container
+  padding-top: 30px
+  z-index: 1
+  .company-slider
+    position: relative
+    min-height: 500px
+    display: block
+    width: calc(100% - 100px)
+    margin: 0px auto
+    background-color: #FFF
+    border-radius: 0px 0px 30px 30px
+    background-size: cover !important
+    background-position: center !important
+    background-repeat: no-repeat !important
+    .icons-wrapper
+      position: absolute
+      padding: 5px 0px
+      width: 260px
+      background: #FFF
+      border-radius: 10px
+      bottom: -30px
+      left: 50%
+      transform: translateX(-50%)
+      box-sizing: border-box
+      display: flex
+      justify-content: center
+      .icon
+        width: 50px
+        height: 50px
+        background-size: cover !important
+        background-position: center !important
+        background-repeat: no-repeat !important
+        background-color: #f9f9f9
+        &:first-child
+          border-radius: 10px 0px 0px 10px
+        &:last-child
+          border-radius: 0px 10px 10px 0px
+      .arrow
+        position: absolute
+        width: 30px
+        height: 30px
+        background: $red
+        border-radius: 50%
+        top: 50%
+        transform: translateY(-50%)
+        text-align: center
+        line-height: 30px
+        cursor: pointer
+        &.right
+          right: -15px
+        &.left
+          left: -15px
+          img
+            transform-origin: center
+            transform: rotate(180deg) translateX(2px)
+
+.visit-card-container
+  display: block
+  width: calc(100% - 100px)
+  margin: 0px auto
+  min-height: 600px
+  background: #FFF
+  margin-top: 80px
+  border-radius: 30px
+  margin-bottom: 100px
+  .header
+    display: flex
+    position: relative
+    .black-path
+      position: absolute
+      width: 100%
+      height: 10px
+      background: #4A4A4A
+      left: 0px
+      bottom: -20px
+      z-index: 1
+      &::before
+        content: ""
+        position: absolute
+        top: -45px
+        left: 0px
+        width: 100%
+        height: 47px
+        background: url("../svg/black-path-top.svg")
+        background-size: cover
+        background-position: top
+        background-repeat: no-repeat
+      &::after
+        content: ""
+        position: absolute
+        bottom: -99px
+        left: 0px
+        width: 100%
+        height: 100px
+        background: url("../svg/black-path-bottom.svg")
+        background-size: cover
+        background-position: bottom
+        background-repeat: no-repeat
+
+    .logo
+      width: 300px
+      height: 300px
+      flex-shrink: 0
+      background: #F9F9F9
+      position: relative
+      border-radius: 30px 0px 0px 0px
+      text-align: center
+      display: flex
+      flex-direction: column
+      justify-content: center
+      box-sizing: border-box
+      padding: 0px 20px
+      text-align: center
+      &::after
+        content: ""
+        position: absolute
+        width: 68px
+        height: 100%
+        top: 0px
+        right: -68px
+        background: url("../svg/visit-card-top-left.svg")
+        background-size: cover
+        background-position: top left
+      img
+        max-height: 200px
+        vertical-align: middle
+    .content
+      width: 100%
+      box-sizing: border-box
+      padding: 10px 100px
+      font-family: $cairo
+      p
+        img
+          vertical-align: middle
+          margin-right: 5px
+          height: 20px
+          width: 20px
+      .social-media
+        padding: 20px 0px
+        a
+          margin-right: 10px
+          &.twitter
+            &:hover
+              svg
+                path
+                  fill: #1da1f2
+          &.linkedin
+            &:hover
+              svg
+                path
+                  fill: #0077b5
+          &.instagram
+            &:hover
+              svg
+                path
+                  fill: #c13584
+    .social
+      width: 90px
+      flex-shrink: 0
+      .wrapper
+        display: flex
+        flex-direction: column
+        .item
+          width: 100%
+          background: #F9F9F9
+          line-height: 75px
+          height: 75px
+          display: block
+          text-align: center
+          font-family: $cairo
+          &.views
+            border-radius: 0px 30px 0px 0px
+            position: relative
+            display: flex
+            flex-direction: column
+            justify-content: center
+            &::after
+              content: ""
+              position: absolute
+              bottom: 0px
+              left: 50%
+              transform: translateX(-50%)
+              height: 1px
+              width: 80%
+              background: #F1F1F1
+            div
+              line-height: normal
+              span
+                font-weight: 700
+                font-size: 13px
+                color: #555
+              img
+                display: block
+                margin: 5px auto
+          &.whatsapp
+            border-radius: 0px 0px 0px 30px
+          &.favorite
+            background: #FFF
+            line-height: normal
+            cursor: pointer
+            span
+              font-weight: 700
+              font-size: 15px
+              color: #555
+              transition: color 0.3s
+            img, svg
+              display: block
+              margin: 5px auto
+            svg
+              path
+                fill: #555
+                transition: fill 0.3s
+            &:hover
+              span
+                color: #333
+              svg
+                path
+                  fill: #333
+            &.active
+              span
+                color: $yellow
+              svg
+                path
+                  fill: $yellow
+              svg
+                animation-name: pulse
+                animation-duration: 0.6s
+                animation-fill-mode: both
+                animation-timing-function: linear
+                transform-origin: center
+  .ceo-card
+    position: relative
+    z-index: 2
+    min-height: 200px
+    width: 300px
+    margin: 0px auto
+    margin-top: 100px
+    box-sizing: border-box
+    padding-top: 70px
+    .avatar
+      position: absolute
+      left: 50%
+      transform: translateX(-50%)
+      top: -50px
+      width: 100px
+      height: 100px
+      border-radius: 50%
+      background-color: #FFF
+      background-position: center
+      background-size: cover
+      border: 10px #FFF solid
+    h5
+      color: #4A4A4A
+      text-align: center
+      padding: 0px 10px
+      font-family: $cairo
+      display: block
+      font-size: 20px
+      margin: 0px auto
+    p
+      font-family: $cairo
+      font-weight: 300
+      text-align: center
+      &.description
+        color: #C72127
+        font-size: 13px
+      svg, img
+        vertical-align: middle
+        margin-right: 5px
+
+h1.title
+  font-family: $cairo
+  color: #4A4A4A
+  position: relative
+  text-align: center
+  font-weight: 300
+  &::after
+    content: ""
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%)
+    width: calc(100% + 50px)
+    height: 0.5px
+    background: #F1F1F1
+  span
+    position: relative
+    z-index: 1
+    background: #FFF
+    padding: 0px 20px
+
+
+.description-container
+  max-width: 500px
+  margin: 0px auto
+  margin-top: 50px
+  .content
+    color: #666666
+    font-family: $cairo
+    font-size: 16px
+    font-weight: 300
+    margin: 20px auto
+    position: relative
+    &::after
+      content: '“'
+      position: absolute
+      top: -45px
+      left: -25px
+      font-size: 50px
+      font-weight: 700
+      color: #DDD
+    &::before
+      content: '“'
+      position: absolute
+      bottom: -45px
+      right: -25px
+      font-size: 50px
+      font-weight: 700
+      color: #DDD
+
+.contact-container
+  max-width: 500px
+  margin: 50px auto
+  form
+    margin: 40px auto
+    max-width: 350px
+    input
+      display: block
+      line-height: 50px
+      background: #F9F9F9
+      border: 1px #F1F1F1 solid
+      box-sizing: border-box
+      padding: 0px 20px
+      width: 100%
+      margin-bottom: 10px
+      outline: 0
+      border-radius: 20px 5px
+      font-family: $cairo
+      color: #555
+      &::placeholder
+        color: #DDD
+        transition: color 0.3s
+      &:focus
+        border-color: rgba($red,0.2)
+        &::placeholder
+          color: rgba($red,0.7)
+      &[type="submit"]
+        background: $red
+        width: 150px
+        text-align: center
+        color: #FFF
+        margin-left: auto
+        border: 0
+        border-radius: 20px 5px
+        cursor: pointer
+    textarea
+      background: #F9F9F9
+      border: 1px #F1F1F1 solid
+      box-sizing: border-box
+      border-radius: 20px 5px
+      padding: 20px
+      width: 100%
+      font-family: $cairo
+      max-width: 100%
+      min-width: 100%
+      height: 200px
+      max-height: 200px
+      min-height: 200px
+      margin-bottom: 10px
+      outline: 0
+      color: #555
+      &::placeholder
+        color: #DDD
+        transition: color 0.3s
+      &:focus
+        border-color: rgba($red,0.2)
+        &::placeholder
+          color: rgba($red,0.7)
+
+.map-container
+  border-radius: 0px 0px 30px 30px
+  display: block
+  width: 100%
+  height: 400px
+  position: relative
+  margin-top: 100px
+  .location-pin
+    position: absolute
+    width: 50px
+    height: 50px
+    border-radius: 50%
+    background: #f9f9f9
+    border: 10px #FFF solid
+    top: -25px
+    left: 50%
+    transform: translateX(-50%)
+    z-index: 1
+    text-align: center
+    line-height: 60px
+    //box-shadow: -3px -2px 30px 0px rgba(0, 0, 0, 0.1)
+  iframe
+    width: 100%
+    height: 100%
+    border-radius: 0px 0px 30px 30px
+@keyframes pulse
+  0%
+    transform: scale(1)
+  40%
+    transform: scale(1.3)
+  70%
+    transform: scale(0.8)
+  100%
+    transform: scale(1)

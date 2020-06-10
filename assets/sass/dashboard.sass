@@ -218,3 +218,102 @@ body, html
         b
           color: #555
           font-weight: 400
+
+.push-notifications-container
+  position: fixed
+  top: 63px
+  right: 0px
+  width: 400px
+  max-height: 300px
+  overflow: auto
+  z-index: 99
+  box-sizing: border-box
+  padding: 10px 20px
+
+.push-notifications-container .notification
+  display: block
+  margin-bottom: 5px
+  padding: 10px 10px
+  background: #fff
+  border-radius: 5px
+  font-size: 14px
+  box-shadow: -5px 5px 10px 0px rgba(0,0,0,0.1)
+  color: #555
+
+.push-notifications-container .notification.success
+  background: #34d895
+  color: #FFF
+  font-weight: bold
+
+.push-notifications-container .notification.error
+  background: #f91117a3
+  color: #FFF
+  font-weight: bold
+
+
+
+
+.ajaxContainer
+  position: relative
+  min-height: 200px
+/* #########  END LOADING SPINNER  ##### */
+/* ##################################### */
+.loadingContainer
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%,-50%)
+  width: 50px
+  height: 50px
+  border-radius: 50%
+  background: #DDD
+  overflow: hidden
+  transition: 0.6s
+  opacity: 0
+  z-index: -99
+  visibility: hidden
+
+.loadingContainer.active
+  opacity: 1
+  z-index: 2
+  visibility: visible
+
+.loadingContainer::after
+  content: ""
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%,-50%)
+  width: 40px
+  height: 40px
+  background: #F3F3F3
+  border-radius: 50%
+  z-index: 2
+  box-shadow: 0px 0px 10px 0px #1c45ef
+
+.loadingContainer::before
+  content: ""
+  position: absolute
+  top: 0px
+  left: 50%
+  transform: translateX(-50%)
+  width: 50px
+  height: 25px
+  background: #1c45ef
+  border-radius: 50% 50% 0 0
+  z-index: 2
+  animation-name: rotate
+  animation-duration: 1s
+  animation-timing-function: ease-in-out
+  animation-iteration-count: infinite
+  transform-origin: bottom
+
+@keyframes rotate
+  0%
+    transform: translateX(-50%) rotate(360deg)
+    opacity: 1
+  100%
+    transform: translateX(-50%) rotate(-360deg)
+    opacity: 1
+/* #########  END LOADING SPINNER  ##### */
+/* ##################################### */

@@ -1,3 +1,4 @@
+<h1>WEEEEE</h1>
 <?php
   require_once("templates/header.php");
   $exchange_rates = fetch_rates();

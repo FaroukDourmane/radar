@@ -1,0 +1,220 @@
+$cairo: 'Cairo', sans-serif
+$tajawal: 'Tajawal', sans-serif
+
+$green: #b0c154
+$snapchat: #fffc00
+$twitter: #1da1f2
+$instagram: #c13584
+$turkey: #E30A17
+
+//$green: #4EA05B
+$red: #CF2127
+$yellow: #FFC107
+a
+  text-decoration: none
+
+ul
+  margin: 0px
+  padding: 0px
+  list-style: none
+
+p,h2,h1
+  margin: 0px
+
+body, html
+  padding: 0px
+  margin: 0px
+
+.header-container
+  z-index: 2
+
+.dashboard-container
+  margin-top: 50px
+  padding: 20px
+  display: flex
+  .left-side
+    width: 300px
+    flex-shrink: 0
+    margin-right: 20px
+    .avatar-container
+      display: flex
+      flex-direction: column
+      justify-content: center
+      text-align: center
+      background: #333333
+      border-radius: 10px
+      margin-bottom: 15px
+      min-height: 250px
+      .wrapper
+        .avatar
+          display: block
+          margin: 0px auto
+          width: 100px
+          height: 100px
+          background-color: #FFF
+          border-radius: 10px
+          margin-bottom: 10px
+        h1
+          font-weight: 300
+          font-family: $cairo
+          color: #f1f1f1
+          font-size: 25px
+    .list-container
+      ul
+        margin-bottom: 15px
+        li
+          a
+            display: block
+            font-family: $cairo
+            color: #555555
+            font-size: 16px
+            background: #F9F9F9
+            line-height: 60px
+            box-sizing: border-box
+            padding: 0px 20px
+            transition: background 0.3s
+            position: relative
+            border-bottom: 1px #F1F1F1 solid
+            &:hover, &.active
+              background: #FFF
+            img,svg
+              vertical-align: middle
+              height: 20px
+              margin-right: 10px
+            &.statistics
+              border-radius: 10px !important
+              background: #FFF
+              &::after
+                content: url('../svg/graph-vector.svg')
+                position: absolute
+                bottom: 0px
+                right: 20px
+                height: 38px
+                opacity: 0.5
+                transition: 0.3s
+              &:hover, &.active
+                &::after
+                  opacity: 1
+            &.delete
+              color: #E86262
+            .label
+              position: absolute
+              top: 50%
+              right: 10px
+              font-size: 12px
+              background: #FFF3D0
+              border-radius: 10px
+              color: #FFC107
+              line-height: 30px
+              min-width: 30px
+              text-align: center
+              transform: translateY(-50%)
+          &:first-child
+            a
+              border-radius: 10px 10px 0px 0px
+          &:last-child
+            a
+              border-radius: 0px 0px 10px 10px
+              border-bottom: 0
+  .right-side
+    width: 100%
+    background: #FFF
+    box-sizing: border-box
+    padding: 30px
+    height: fit-content
+    border-radius: 10px
+    h1
+      color: #555555
+      font-family: $cairo
+      font-weight: 300
+    .stats-wrapper
+      display: flex
+      justify-content: space-around
+      padding: 40px 0px
+      .item
+        background: #FCFCFC
+        border-radius: 10px
+        width: 150px
+        height: 150px
+        display: flex
+        flex-direction: column
+        justify-content: center
+        position: relative
+        &.notify
+          &::after
+            content: ""
+            position: absolute
+            top: 10px
+            right: 10px
+            width: 10px
+            height: 10px
+            background: #F86363
+            border-radius: 50%
+        .wrap
+          text-align: center
+          font-family: $cairo
+          h1
+            color: #555555
+          img
+            display: block
+            height: 25px
+            width: 25px
+            margin: 5px auto
+          span
+            font-weight: 300
+            font-size: 15px
+            color: #555555
+        &.yellow
+          background: #FFFAEB
+          .wrap
+            h1, span
+              color: #FFC107
+    .yellow-title
+      color: #FFC107
+      font-weight: 300
+      font-size: 15px
+      position: relative
+      *
+        position: relative
+        z-index: 2
+      &::after
+        content: ""
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        z-index: 1
+        left: 0px
+        height: 0.1px
+        width: 80%
+        background: rgba(#FFC107, 0.5)
+      span
+        background: #FFF
+        padding: 0px 10px
+      img, svg
+        vertical-align: -3px
+        background-color: #FFF
+        padding: 0px 10px
+
+    .notifications-wrapper
+      padding: 40px 0px
+      .item
+        font-family: $cairo
+        line-height: 50px
+        background: #FCFCFC
+        border-radius: 10px
+        box-sizing: border-box
+        padding: 0px 20px
+        color: #333
+        font-weight: 300
+        width: fit-content
+        margin-bottom: 20px
+        &:last-child
+          margin-bottom: 0
+        img,svg
+          vertical-align: middle
+          height: 20px
+          width: 20px
+          margin-right: 10px
+        b
+          color: #555
+          font-weight: 400

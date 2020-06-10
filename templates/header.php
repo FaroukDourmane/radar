@@ -90,7 +90,7 @@
     </div>
 
     <div class="center-side">
-      <a href="index.php">
+      <a href="<?php echo pre_home; ?>index.php">
         <img src="<?php echo assets; ?>/svg/logo-white.svg" />
       </a>
     </div>

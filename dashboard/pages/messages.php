@@ -6,9 +6,8 @@
   <!-- Item -->
   <div class="item">
     <div class="wrap">
-      <h1>1.5K</h1>
-      <img src="../assets/svg/eye-black.svg" />
-      <span>Views</span>
+      <h1>100</h1>
+      <span>Total</span>
     </div>
   </div>
   <!-- END Item -->
@@ -16,19 +15,8 @@
   <!-- Item -->
   <div class="item yellow">
     <div class="wrap">
-      <h1>1K</h1>
-      <img src="../assets/svg/star.svg" />
-      <span>Favorite</span>
-    </div>
-  </div>
-  <!-- END Item -->
-
-  <!-- Item -->
-  <div class="item notify">
-    <div class="wrap">
       <h1>10</h1>
-      <img src="../assets/svg/messages-black.svg" />
-      <span>Messages</span>
+      <span>Unseen</span>
     </div>
   </div>
   <!-- END Item -->
@@ -36,15 +24,31 @@
 </div>
 <!-- End stats wrapper -->
 
-<h1 class="yellow-title"> <img src="../assets/svg/yellow-bell.svg" /><span>Notifications</span> </h1>
-<!-- Notifications wrapper -->
-<div class="notifications-wrapper">
-  <div class="item">
-    <img src="../assets/svg/eye-black.svg" /> Last view at : <b><?php echo date("d/m/Y h:i", time()); ?></b>
-  </div>
-
-  <div class="item">
-    <img src="../assets/svg/eye-black.svg" /> 2 unread messages : <b><?php echo date("d/m/Y h:i", time()); ?></b>
-  </div>
+<!-- inline-tools -->
+<div class="inline-tools">
+  <a> <label class="checkbox" for="select_all"> <input type="checkbox" id="select_all" value=""> <span></span> Select all </label> </a>
+  <a href="#" class="delete"> <img src="../assets/svg/red-delete.svg" /> Delete selected </a>
 </div>
-<!-- END Notifications -->
+<!-- END inline-tools -->
+
+
+<h1 class="yellow-title"><span>Unseen</span> </h1>
+<!-- Messages wrapper -->
+<div class="messages-wrapper">
+  <?php for ($i=0; $i < 4; $i++) { ?>
+    <div class="item unseen">
+      <label class="checkbox" for="select_<?php echo $i; ?>"> <input type="checkbox" id="select_<?php echo $i; ?>" value=""> <span></span> </label>
+      <a href="#"> <b>Farouk dourmane</b> <span>dourmanefarouk@gmail.com</span> </a>
+      <span class="date">1 day ago</span>
+    </div>
+  <?php } ?>
+  
+  <?php for ($i=0; $i < 4; $i++) { ?>
+    <div class="item">
+      <label class="checkbox" for="select_<?php echo $i; ?>"> <input type="checkbox" id="select_<?php echo $i; ?>" value=""> <span></span> </label>
+      <a href="#"> <b>Farouk dourmane</b> <span>dourmanefarouk@gmail.com</span> </a>
+      <span class="date">1 day ago</span>
+    </div>
+  <?php } ?>
+</div>
+<!-- END Messages -->

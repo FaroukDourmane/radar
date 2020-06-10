@@ -253,7 +253,7 @@ body.disabled::after {
   height: 100px;
   background: url("../svg/top-red-path.svg");
   background-position: bottom;
-  background-size: cover;
+  background-size: 200%;
   background-repeat: no-repeat;
   z-index: 0;
 }
@@ -315,7 +315,7 @@ body.disabled::after {
   height: 450px;
   background: url("../svg/top-white-path.svg");
   background-position: bottom;
-  background-size: cover;
+  background-size: 200%;
   background-repeat: no-repeat;
   z-index: 0;
 }

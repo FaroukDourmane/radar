@@ -97,6 +97,12 @@ body, html
                   opacity: 1
             &.delete
               color: #E86262
+              &.active
+                background: $red
+                color: #FFF
+                svg
+                  path
+                    fill: #FFF
             .label
               position: absolute
               top: 50%
@@ -242,9 +248,13 @@ body, html
           color: #555
           font-weight: 700
           margin-right: 10px
+        span
+          font-size: 14px
+          color: #555
         .date
           float: right
           font-size: 14px
+          color: #777
         &.unseen
           background: #FFFAEB
     .inline-tools
@@ -271,6 +281,9 @@ body, html
           font-size: 11px
     .form-container
       max-width: 500px
+      margin-bottom: 50px
+      &.center
+        margin: 50px auto
       h2
         font-family: $cairo
         color: #555
@@ -291,7 +304,13 @@ body, html
           height: 0.5px
           background: #555
           z-index: 1
-      input
+      textarea
+        max-width: 100%
+        min-width: 100%
+        max-height: 200px
+        min-height: 200px
+        color: #555
+      input, textarea
         display: block
         line-height: 50px
         background: #F9F9F9
@@ -305,6 +324,69 @@ body, html
         outline: 0
         &:focus
           border: rgba($red,0.2)
+        &[type="submit"]
+          background: $red
+          cursor: pointer
+          color: #FFF
+          &.red
+            background: #FFF
+            border: 1px rgba($red,0.5) solid
+            color: $red
+            max-width: 200px
+            border-radius: 5px
+            &:hover
+              background: $red
+              color: #FFF
+              border-color: $red
+      .label
+        display: flex
+        margin-bottom: 10px
+        .group
+          width: 100%
+          &:first-child
+            margin-right: 10px
+          span
+            display: block
+            color: #555555
+            font-family: $cairo
+            font-size: 15px
+            font-weight: 600
+            margin-bottom: 5px
+            padding-left: 10px
+
+.image-preview
+  display: block
+  width: 150px
+  height: 150px
+  border-radius: 50%
+  background-color: #f1f1f1
+  background-size: cover !important
+  background-position: center !important
+  background-repeat: no-repeat !important
+  position: relative
+  margin: 20px auto
+  border: 1px #f1f1f1 solid
+  &.contain
+    background-size: contain !important
+  .edit
+    position: absolute
+    width: 40px
+    height: 40px
+    background: #FFF
+    border-radius: 50%
+    bottom: -20px
+    left: 50%
+    transform: translateX(-50%)
+    border: 1px #F1F1F1 solid
+    text-align: center
+    line-height: 40px
+    cursor: pointer
+    &:hover
+      background: #f9f9f9
+    svg,img
+      vertical-align: middle
+      height: 15px
+      width: 15px
 
 .push-notifications-container
   position: fixed
@@ -449,3 +531,46 @@ label.checkbox
     margin-right: 5px
     border-radius: 5px
     border: 1px #DDD solid
+
+p
+  font-family: $cairo
+  &.notice
+    color: #555555
+    font-size: 13px
+    font-weight: 300
+  &.big
+    font-size: 16px
+    max-width: 500px
+    margin: 20px 0px
+.text-center
+  text-align: center
+
+.gallery-container
+  display: flex
+  flex-wrap: wrap
+  padding: 40px 0px
+  .item
+    width: 150px
+    height: 150px
+    border-radius: 10px
+    background-color: #F1F1F1
+    background-position: center !important
+    background-size: cover !important
+    background-repeat: no-repeat !important
+    margin-right: 10px
+    margin-bottom: 10px
+    line-height: 150px
+    text-align: center
+    img,svg
+      vertical-align: middle
+      height: 50px
+    &.upload
+      cursor: pointer
+      &:hover
+        background: #f9f9f9
+
+hr
+  display: block
+  margin: 20px auto
+  border: 1px #f1f1f1 solid
+  border-top: 0

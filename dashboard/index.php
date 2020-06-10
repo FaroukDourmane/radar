@@ -1,4 +1,12 @@
-<?php require_once("../templates/header.php"); ?>
+<?php
+  require_once("../templates/header.php");
+
+  if ( !isLogged() )
+  {
+    redirect("../index.php");
+    exit;
+  }
+?>
 <link rel="stylesheet" href="../assets/css/dashboard.css">
 
 <div class="dashboard-container">
@@ -22,7 +30,7 @@
         <li> <a href="#account" id="getAjaxPage"> <img src="../assets/svg/account-settings.svg" /> Account settings </a> </li>
         <li> <a href="#ceo" id="getAjaxPage"> <img src="../assets/svg/user-settings.svg" /> CEO informations </a> </li>
         <li> <a href="#company" id="getAjaxPage"> <img src="../assets/svg/building.svg" /> Company informations </a> </li>
-        <li> <a href="#delete" id="getAjaxPage" class="delete"> <img src="../assets/svg/red-delete.svg" /> Delete account </a> </li>
+        <li> <a href="#delete" id="getAjaxPage" class="delete"> <?php echo file_get_contents("../assets/svg/red-delete.svg"); ?> Delete account </a> </li>
       </ul>
     </div>
   </div>

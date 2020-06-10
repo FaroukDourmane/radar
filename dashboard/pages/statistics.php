@@ -1,3 +1,13 @@
+<?php
+  require_once("../../config/config.php");
+
+  if ( !isLogged() )
+  {
+    redirect("../index.php");
+    exit;
+  }
+?>
+
 <h1> Statistics </h1>
 
 <!-- stats wrapper -->

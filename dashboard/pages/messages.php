@@ -1,3 +1,13 @@
+<?php
+  require_once("../../config/config.php");
+
+  if ( !isLogged() )
+  {
+    redirect("../index.php");
+    exit;
+  }
+?>
+
 <h1> Messages </h1>
 
 <!-- stats wrapper -->
@@ -42,7 +52,7 @@
       <span class="date">1 day ago</span>
     </div>
   <?php } ?>
-  
+
   <?php for ($i=0; $i < 4; $i++) { ?>
     <div class="item">
       <label class="checkbox" for="select_<?php echo $i; ?>"> <input type="checkbox" id="select_<?php echo $i; ?>" value=""> <span></span> </label>

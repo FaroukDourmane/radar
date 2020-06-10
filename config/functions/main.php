@@ -30,19 +30,19 @@ deny_self(basename(__FILE__));
 
    switch ( $_SESSION["CURRENT_LANG"] ) {
      case 'AR':
-       $preview = '<img src="assets/svg/sa.svg" /> AR ';
+       $preview = '<img src="'.assets.'/svg/sa.svg" /> AR ';
        break;
 
      case 'EN':
-       $preview = '<img src="assets/svg/uk.svg" /> EN ';
+       $preview = '<img src="'.assets.'/svg/uk.svg" /> EN ';
        break;
 
      case 'TR':
-       $preview = '<img src="assets/svg/tr.svg" /> TR ';
+       $preview = '<img src="'.assets.'/svg/tr.svg" /> TR ';
        break;
 
      default:
-       $preview = '<img src="assets/svg/en.svg" /> EN '.$arrow;
+       $preview = '<img src="'.assets.'/svg/en.svg" /> EN '.$arrow;
        break;
    }
 

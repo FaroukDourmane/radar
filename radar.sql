@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.3
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
--- Hôte : localhost
--- Généré le :  mer. 10 juin 2020 à 09:37
--- Version du serveur :  10.1.36-MariaDB
--- Version de PHP :  7.2.10
+-- Host: 127.0.0.1
+-- Generation Time: Jun 11, 2020 at 05:10 PM
+-- Server version: 10.4.11-MariaDB
+-- PHP Version: 7.4.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -19,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données :  `radar`
+-- Database: `radar`
 --
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `category`
+-- Table structure for table `category`
 --
 
 CREATE TABLE `category` (
@@ -37,18 +36,28 @@ CREATE TABLE `category` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
--- Déchargement des données de la table `category`
+-- Dumping data for table `category`
 --
 
 INSERT INTO `category` (`id`, `name_en`, `name_tr`, `name_ar`, `image_path`) VALUES
 (1, 'Real estate', 'Emlak', 'العقارات', 'assets/svg/home-small-black.svg'),
 (2, 'Tourism', 'turizm', 'سياحة', 'assets/categories/plane.svg'),
-(3, 'Education', 'Eğitim', 'تعليم', 'assets/categories/university.svg');
+(3, 'Education', 'Eğitim', 'تعليم', 'assets/categories/university.svg'),
+(4, 'lawyer', 'avukat', 'محامي', 'assets/categories/law.svg'),
+(5, 'press', 'basın', 'صحافة', 'assets/categories/press.svg'),
+(6, 'technology', 'teknoloji', 'تكنولوجيا', 'assets/categories/technology.svg'),
+(7, 'consulting', 'Danışmanlık', 'إستشارات', 'assets/categories/consulting.svg'),
+(8, 'Marine services', 'deniz hizmetleri', 'خدمات بحرية', 'assets/categories/marine.svg'),
+(9, 'entertainment', 'eğlence', 'ترفيه', 'assets/categories/entertainment.svg'),
+(10, 'electricity', 'elektrik', 'كهرباء', 'assets/categories/electricity.svg'),
+(11, 'Finance', 'finans', 'خدمات مالية', 'assets/categories/finance.svg'),
+(12, 'Food', 'Gıda', 'غذاء', 'assets/categories/food.svg'),
+(13, 'Security', 'Güvenlik', 'أمن', 'assets/categories/security.svg');
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `company`
+-- Table structure for table `company`
 --
 
 CREATE TABLE `company` (
@@ -73,12 +82,12 @@ CREATE TABLE `company` (
   `company_logo` varchar(255) COLLATE utf8_bin DEFAULT NULL,
   `ceo_avatar` varchar(255) COLLATE utf8_bin DEFAULT NULL,
   `work_description` text COLLATE utf8_bin NOT NULL,
-  `map_code` text COLLATE utf8_bin,
+  `map_code` text COLLATE utf8_bin DEFAULT NULL,
   `added_date` varchar(255) COLLATE utf8_bin NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
--- Déchargement des données de la table `company`
+-- Dumping data for table `company`
 --
 
 INSERT INTO `company` (`id`, `name`, `category`, `account_email`, `account_password`, `ceo_firstname`, `ceo_lastname`, `ceo_job_description`, `ceo_email`, `ceo_phone`, `company_email`, `company_phone`, `company_address`, `company_facebook`, `company_instagram`, `company_twitter`, `company_linkedin`, `company_whatsapp`, `company_logo`, `ceo_avatar`, `work_description`, `map_code`, `added_date`) VALUES
@@ -87,7 +96,7 @@ INSERT INTO `company` (`id`, `name`, `category`, `account_email`, `account_passw
 -- --------------------------------------------------------
 
 --
--- Structure de la table `company_images`
+-- Table structure for table `company_images`
 --
 
 CREATE TABLE `company_images` (
@@ -97,7 +106,7 @@ CREATE TABLE `company_images` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
--- Déchargement des données de la table `company_images`
+-- Dumping data for table `company_images`
 --
 
 INSERT INTO `company_images` (`id`, `company_id`, `image_path`) VALUES
@@ -111,7 +120,7 @@ INSERT INTO `company_images` (`id`, `company_id`, `image_path`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `exchange_rates`
+-- Table structure for table `exchange_rates`
 --
 
 CREATE TABLE `exchange_rates` (
@@ -122,7 +131,7 @@ CREATE TABLE `exchange_rates` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
--- Déchargement des données de la table `exchange_rates`
+-- Dumping data for table `exchange_rates`
 --
 
 INSERT INTO `exchange_rates` (`last_update`, `gbp`, `eur`, `try`) VALUES
@@ -131,7 +140,7 @@ INSERT INTO `exchange_rates` (`last_update`, `gbp`, `eur`, `try`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `session`
+-- Table structure for table `session`
 --
 
 CREATE TABLE `session` (
@@ -142,58 +151,58 @@ CREATE TABLE `session` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
--- Déchargement des données de la table `session`
+-- Dumping data for table `session`
 --
 
 INSERT INTO `session` (`email`, `token`, `time`, `id`) VALUES
-('microsoft@email.com', '$2y$10$k7EgtDXaaqwp/5.3uNhbb.QiU1Y8hDmaKs5KT.A5/yB68UVGiGfxm5edf88a5a496b1591707813127001', '1591707813', '3a0cd383a7b2f81d9be21cfb62b74916');
+('microsoft@email.com', '$2y$10$FJ6gC4e2kbjR/L5oscR0VeBG1ITvStCsaKrLSu5tuvEh.QTZMyyke5ee2147d070ff1591874685::1', '1591874685', '88pqs0ravs8fjc6smb24opnfus');
 
 --
--- Index pour les tables déchargées
+-- Indexes for dumped tables
 --
 
 --
--- Index pour la table `category`
+-- Indexes for table `category`
 --
 ALTER TABLE `category`
   ADD PRIMARY KEY (`id`);
 
 --
--- Index pour la table `company`
+-- Indexes for table `company`
 --
 ALTER TABLE `company`
   ADD PRIMARY KEY (`id`);
 
 --
--- Index pour la table `company_images`
+-- Indexes for table `company_images`
 --
 ALTER TABLE `company_images`
   ADD PRIMARY KEY (`id`);
 
 --
--- Index pour la table `session`
+-- Indexes for table `session`
 --
 ALTER TABLE `session`
   ADD UNIQUE KEY `token` (`token`);
 
 --
--- AUTO_INCREMENT pour les tables déchargées
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT pour la table `category`
+-- AUTO_INCREMENT for table `category`
 --
 ALTER TABLE `category`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
--- AUTO_INCREMENT pour la table `company`
+-- AUTO_INCREMENT for table `company`
 --
 ALTER TABLE `company`
   MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT pour la table `company_images`
+-- AUTO_INCREMENT for table `company_images`
 --
 ALTER TABLE `company_images`
   MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;

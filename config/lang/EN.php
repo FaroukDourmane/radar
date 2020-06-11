@@ -97,5 +97,25 @@
     "redirect" => "Please wait, you will be redirected automatically.",
 
     "no_account" => "You don’t have an account ?",
+
+    // DASHBOARD
+    "statistics" => "Statistics",
+    "messages" => "Messages",
+    "account_settings" => "Account settings",
+    "ceo_informations" => "CEO informations",
+    "company_information" => "Company information",
+    "delete_account" => "Delete account",
+    "views" => "Views",
+    "favorite" => "Favorite",
+    "notifications" => "Notifications",
+    "last_view_at" => "Last view at",
+    "unred_messages" => "Unread message(s)",
+
+    "change_email" => "Change email",
+    "change_password" => "Change password",
+    "enter_password" => "Enter password",
+    "current_password" => "Current password",
+    "new_password" => "New password",
+    "new_password_confirm" => "New password confirmation",
   ];
 ?>

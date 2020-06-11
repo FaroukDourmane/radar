@@ -8,22 +8,22 @@
   }
 ?>
 
-<h1> Account settings </h1>
+<h1> <?php __("account_settings"); ?> </h1>
 
 <form class="form-container" action="" method="post">
-  <h2> <span> Change email </span> </h2>
+  <h2> <span> <?php __("change_email"); ?> </span> </h2>
   <input type="email" name="" value="<?php echo $_COMPANY["account_email"]; ?>" required />
-  <input type="password" name="" placeholder="Enter password" required />
+  <input type="password" name="" placeholder="<?php __("enter_password"); ?>" required />
 
-  <input type="submit" name="" value="Change email" />
+  <input type="submit" name="" value="<?php __("change_email"); ?>" />
 </form>
 
 
 <form class="form-container" action="" method="post">
-  <h2> <span> Change password </span> </h2>
-  <input type="password" name="current_password" placeholder="Current password" required />
-  <input type="password" name="new_password" placeholder="New password" required />
-  <input type="password" name="new_password_confirm" placeholder="New password confirm" required />
+  <h2> <span> <?php __("change_password"); ?> </span> </h2>
+  <input type="password" name="current_password" placeholder="<?php __("current_password"); ?>" required />
+  <input type="password" name="new_password" placeholder="<?php __("new_password"); ?>" required />
+  <input type="password" name="new_password_confirm" placeholder="<?php __("new_password_confirm"); ?>" required />
 
-  <input type="submit" name="" value="Change password" />
+  <input type="submit" name="" value="<?php __("change_password"); ?>" />
 </form>

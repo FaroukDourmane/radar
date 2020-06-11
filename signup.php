@@ -23,7 +23,7 @@
 
   <div class="body-container">
     <!-- Login Container -->
-    <div class="login-container success">
+    <div class="login-container">
       <div class="photo-side">
         <div class="success-text" dir="<?php __("dir"); ?>">
           <h1><?php __("congrats"); ?></h1>

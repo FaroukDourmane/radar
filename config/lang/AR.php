@@ -102,5 +102,25 @@
     "redirect" => "الرجاء الإنتظار , سيتم تحويلك تلفائيا",
 
     "no_account" => "ليس لديك حساب ؟",
+
+    // DASHBOARD
+    "statistics" => "الإحصائيات",
+    "messages" => "الرسائل",
+    "account_settings" => "إعدادات الحساب",
+    "ceo_informations" => "معلومات المدير",
+    "company_information" => "معلومات الشركة",
+    "delete_account" => "حذف الحساب",
+    "views" => "الزيارات",
+    "favorite" => "المفضلة",
+    "notifications" => "الإشعارات",
+    "last_view_at" => "آخر زيارة",
+    "unred_messages" => "رسائل غير مقروؤة",
+
+    "change_email" => "تغيير البريد الإلكتروني",
+    "change_password" => "تغيير كلمة المرور",
+    "enter_password" => "أدخل كلمة المرور",
+    "current_password" => "كلمة المرور الحالية",
+    "new_password" => "كلمة مرور جديدة",
+    "new_password_confirm" => "تأكيد كلمة المرور",
   ];
 ?>

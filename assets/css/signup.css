@@ -266,7 +266,7 @@ textarea {
         background-size: cover;
         z-index: 1;
         border-radius: 0px 0px 30px 30px;
-        height: 150px;
+        height: 200px;
         width: 100%;
         opacity: 0.8;
         animation-name: slidetop;

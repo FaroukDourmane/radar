@@ -98,5 +98,18 @@
     "redirect" => "Lütfen bekleyin, otomatik olarak yönlendirileceksiniz.",
 
     "no_account" => "Hesabın yok mu ?",
+
+    // DASHBOARD
+    "statistics" => "İstatistik",
+    "messages" => "Mesajlar",
+    "account_settings" => "Hesap ayarları",
+    "ceo_informations" => "CEO bilgileri",
+    "company_information" => "Şirket Bilgisi",
+    "delete_account" => "Hesabı sil",
+    "views" => "Görüntüleme",
+    "favorite" => "Favori",
+    "notifications" => "Bildirimler",
+    "last_view_at" => "Son görünüm",
+    "unred_messages" => "Okunmamış mesajlar",
   ];
 ?>

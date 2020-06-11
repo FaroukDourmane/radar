@@ -64,7 +64,7 @@ function pushNotification(text,css_class="") {
 
 function initialize_page(pages) {
   var hash = location.hash;
-  var default_hash = "#messages";
+  var default_hash = "#statistics";
 
   // Initialize Page Content
   if ( $.trim(hash).length > 0  && page_exists(hash,pages))

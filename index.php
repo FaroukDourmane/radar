@@ -7,9 +7,16 @@
 
   <div class="body-container" <?php echo (isLogged()) ? "style='padding-top:100px;'" : ""; ?>>
 
-    <div class="main-ad">
-      إعلان رئيسي
+    <div class="top-ad-container">
+      <div class="left-ad">
+ds
+      </div>
+
+      <div class="main-ad">
+        إعلان رئيسي
+      </div>
     </div>
+
 
     <!-- Body wrapper -->
     <div class="body-wrapper">
@@ -101,10 +108,11 @@
           <?php for ($i=0; $i < 6; $i++) { ?>
             <div class="ad">
               <a href="#" class="hidden-link"></a>
+              <img class="logo" src="assets/svg/logo.svg" />
               <h5 class="name"> شركة رادار للعقارات </h5>
               <p class="category"> عقارات </p>
-              <div class="logo-container"> <img src="assets/svg/logo.svg" /> </div>
               <?php echo file_get_contents("assets/svg/home.svg"); ?>
+              <div class="abstract"></div>
             </div>
           <?php } ?>
         </div>
@@ -124,7 +132,7 @@
           <div class="wrapper">
             <?php for ($i=0; $i < 3; $i++) { ?>
             <div class="item">
-              <div class="cover" style="background:url('assets/img/bg-test.jpg');"></div>
+              <div class="cover" style="background:url('assets/img/login-bg.jpg');"></div>
               <h5> آخر إحصائيات وباء كورونا و موعد رفع الحجر الصحي </h5>
               <p class="date">00/00/0000 00:00</p>
               <p class="content">

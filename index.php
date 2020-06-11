@@ -2,15 +2,16 @@
   require_once("templates/header.php");
   $exchange_rates = fetch_rates();
 ?>
+  <link rel="stylesheet" type="text/css" href="assets/slick/slick.css"/>
+   <link rel="stylesheet" type="text/css" href="assets/slick/slick-theme.css"/>
+
   <!-- Home stylesheet -->
   <link rel="stylesheet" href="assets/css/home.css">
 
   <div class="body-container" <?php echo (isLogged()) ? "style='padding-top:100px;'" : ""; ?>>
 
     <div class="top-ad-container">
-      <div class="left-ad">
-ds
-      </div>
+      <div class="left-ad"></div>
 
       <div class="main-ad">
         إعلان رئيسي
@@ -129,7 +130,7 @@ ds
              آخر الأخبار
           </h1>
 
-          <div class="wrapper">
+          <div class="wrapper articles-wrapper slider">
             <?php for ($i=0; $i < 3; $i++) { ?>
             <div class="item">
               <div class="cover" style="background:url('assets/img/login-bg.jpg');"></div>
@@ -209,3 +210,7 @@ ds
 <input type="hidden" name="eur" value="<?php echo round_float($exchange_rates["eur"]); ?>" />
 
 <?php require_once("templates/footer.php"); ?>
+
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="assets/slick/slick.min.js"></script>
+<script type="text/javascript" src="assets/js/home.js"></script>

@@ -1,0 +1,38 @@
+real estate - عقارات
+tourism - سياحة
+education - تعليم
+
+lawyer - محامي
+press - صحافة
+technology - تكنولوجيا
+consulting - إستشارة
+Marine - بحرية
+entertainment - ترفيه
+electricity - كهرباء
+finance - محاسبة
+food - غداء
+security - أمن
+shoes - احدية
+beauty - مستحضرات تجميل
+fly - طيران
+animals - حيوانات
+services - خدمات
+communications - إتصالات
+building - بناء
+chemistry - كيمياء
+metal - معدن
+media - وسائل الإعلان
+marble - رخام
+furniture - مفروشات
+office - مكاتب
+car - سيارات
+sales - مبيعات
+plastic - بلاستيك
+advertisement - دعاية
+health - صحة
+assurance - تأمين
+agriculture - زراعة
+shipping - شحن
+sewing - خياطة
+trade - تجارة
+industry - صناعة

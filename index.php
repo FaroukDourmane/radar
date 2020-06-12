@@ -5,8 +5,11 @@
   $ads_q = $Q->query("SELECT * FROM `company` ");
   $categories_q = $Q->query("SELECT * FROM `category` ");
 ?>
-  <link rel="stylesheet" type="text/css" href="assets/slick/slick.css"/>
-   <link rel="stylesheet" type="text/css" href="assets/slick/slick-theme.css"/>
+
+<!-- OWL CAROUSEL =================================================================================-->
+<link rel="stylesheet" href="assets/owlcarousel/css/owl.carousel.min.css">
+<link rel="stylesheet" href="assets/owlcarousel/css/owl.theme.default.css">
+<!--===============================================================================================-->
 
   <!-- Home stylesheet -->
   <link rel="stylesheet" href="assets/css/home.css">
@@ -151,7 +154,7 @@
              آخر الأخبار
           </h1>
 
-          <div class="wrapper articles-wrapper slider">
+          <div class="wrapper articles-wrapper owl-carousel">
             <?php for ($i=0; $i < 3; $i++) { ?>
             <div class="item">
               <div class="cover" style="background:url('assets/img/login-bg.jpg');"></div>
@@ -232,6 +235,5 @@
 
 <?php require_once("templates/footer.php"); ?>
 
-<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-<script type="text/javascript" src="assets/slick/slick.min.js"></script>
+<script type="text/javascript" src="assets/owlcarousel/js/owl.carousel.min.js"></script>
 <script type="text/javascript" src="assets/js/home.js"></script>

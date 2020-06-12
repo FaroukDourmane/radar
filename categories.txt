@@ -1,7 +1,6 @@
 real estate - عقارات
 tourism - سياحة
 education - تعليم
-
 lawyer - محامي
 press - صحافة
 technology - تكنولوجيا
@@ -34,5 +33,6 @@ assurance - تأمين
 agriculture - زراعة
 shipping - شحن
 sewing - خياطة
+
 trade - تجارة
 industry - صناعة

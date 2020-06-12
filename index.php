@@ -1,6 +1,9 @@
 <?php
   require_once("templates/header.php");
   $exchange_rates = fetch_rates();
+
+  $ads_q = $Q->query("SELECT * FROM `company` ");
+  $categories_q = $Q->query("SELECT * FROM `category` ");
 ?>
   <link rel="stylesheet" type="text/css" href="assets/slick/slick.css"/>
    <link rel="stylesheet" type="text/css" href="assets/slick/slick-theme.css"/>
@@ -33,14 +36,17 @@
           </div>
 
           <div class="categories-wrapper">
-            <?php for ($i=0; $i < 6; $i++) { ?>
+            <?php
+              if ($categories_q->num_rows > 0) {
+                while ( $category = $categories_q->fetch_assoc() ) {
+            ?>
               <div class="item">
                 <a href="#" class="hidden-link"></a>
-                <?php echo file_get_contents("assets/svg/lawyer.svg"); ?>
-                <b> محامي </b>
+                <?php echo file_get_contents($category["image_path"]); ?>
+                <b> <?php echo $category["name_$lang_suffix"]; ?> </b>
                 <p> 10 نتائج </p>
               </div>
-            <?php } ?>
+            <?php }} ?>
           </div>
 
           <a href="#" class="more"> تصفح المزيد </a>

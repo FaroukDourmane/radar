@@ -22,6 +22,7 @@
 
   require_once(lang_file());
 
+  $lang_suffix = __("lang_prefix",true);
   #####################################################
   ## GENERATE TOKEN FOR USERS                        ##
   ##############################################     ##

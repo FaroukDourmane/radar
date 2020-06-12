@@ -121,7 +121,9 @@ body, html {
             display: block;
             margin: 0px auto;
             margin-bottom: 10px;
-            transition: 0.3s; }
+            transition: 0.3s;
+            height: 40px;
+            width: 40px; }
           .body-container .body-wrapper .left-side .categories-container .categories-wrapper .item b {
             line-height: normal;
             color: #555;

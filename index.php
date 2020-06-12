@@ -11,6 +11,9 @@
 <link rel="stylesheet" href="assets/owlcarousel/css/owl.theme.default.css">
 <!--===============================================================================================-->
 
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+
   <!-- Home stylesheet -->
   <link rel="stylesheet" href="assets/css/home.css">
 
@@ -38,32 +41,38 @@
             <div class="title">طريقة العرض</div>
           </div>
 
-          <div class="categories-wrapper">
-            <?php
-              if ($categories_q->num_rows > 0) {
-                while ( $category = $categories_q->fetch_assoc() ) {
-            ?>
-              <div class="item">
-                <a href="#" class="hidden-link"></a>
-                <?php echo file_get_contents($category["image_path"]); ?>
-                <b> <?php echo $category["name_$lang_suffix"]; ?> </b>
-                <p style="direction:'<?php __('dir'); ?>'">
-                  <?php
-                    $count_companies = count_category_companies($category["id"]);
+            <div class="swiper-wrapper categories-wrapper">
+              <div class="swiper-pagination"></div>
 
-                    if ( $count_companies == 0 ){
-                      __("no_companies");
-                    } else {
-                      echo $count_companies;
-                      echo ( $count_companies > 1 ) ? __("companies",true) : __("company",true);
-                    }
-                  ?>
-                </p>
-              </div>
-            <?php }} ?>
-          </div>
+              <?php
+                if ($categories_q->num_rows > 0) {
+                  $row_count = 0;
+                  while ( $category = $categories_q->fetch_assoc() ) {
+              ?>
+                <div class="item">
+                  <a href="#" class="hidden-link"></a>
+                  <?php echo file_get_contents($category["image_path"]); ?>
+                  <b> <?php echo $category["name_$lang_suffix"]; ?> </b>
+                  <p style="direction:'<?php __('dir'); ?>'">
+                    <?php
+                      $count_companies = count_category_companies($category["id"]);
 
-          <a href="#" class="more"> تصفح المزيد </a>
+                      if ( $count_companies == 0 ){
+                        __("no_companies");
+                      } else {
+                        echo $count_companies;
+                        echo ( $count_companies > 1 ) ? __("companies",true) : __("company",true);
+                      }
+                    ?>
+                  </p>
+                </div>
+              <?php
+              }}
+              ?>
+            </div>
+
+          <a class="more scrollUp"> <?php echo file_get_contents("assets/svg/chevron.svg"); ?> </a>
+          <a class="more scrollDown"> <?php echo file_get_contents("assets/svg/chevron.svg"); ?> </a>
         </div>
 
         <!-- Currency exchanger -->
@@ -120,7 +129,7 @@
         <!-- END Currency -->
 
         <div class="ad-container">
-          منطقة إعلانية
+          <a href="http://radargrup.com/" target="_blank"></a>
         </div>
       </div>
 
@@ -155,7 +164,7 @@
           </h1>
 
           <div class="wrapper articles-wrapper owl-carousel">
-            <?php for ($i=0; $i < 3; $i++) { ?>
+            <?php for ($i=0; $i < 6; $i++) { ?>
             <div class="item">
               <div class="cover" style="background:url('assets/img/login-bg.jpg');"></div>
               <h5> آخر إحصائيات وباء كورونا و موعد رفع الحجر الصحي </h5>
@@ -237,3 +246,17 @@
 
 <script type="text/javascript" src="assets/owlcarousel/js/owl.carousel.min.js"></script>
 <script type="text/javascript" src="assets/js/home.js"></script>
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+/*
+  var swiper = new Swiper('.swiper-container', {
+    direction: 'vertical',
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  }); */
+</script>

@@ -23,6 +23,12 @@ $(document).ready(function(){
         $(".categories-container .categories-wrapper").removeClass('list');
       }
     }
+
+    scrolled=0;
+    $(".categories-container .categories-wrapper").animate({
+            scrollTop:  scrolled
+       });
+
   });
 
   // Currency exchange

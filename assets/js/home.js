@@ -21,4 +21,53 @@ $(document).ready(function(){
     }
   });
 
+
+
+  // Categories slider init
+  $(".categories-container .scrollUp").hide();
+  var scrolled=0;
+  var maxScrollLength = $(".categories-container .categories-wrapper .item").length;
+  maxScrollLength = Math.ceil(maxScrollLength/2);
+  var maxScroll = maxScrollLength*150;
+
+    $(".categories-container .scrollDown").on("click" ,function(){
+      var wrapper = $(".categories-container .categories-wrapper");
+      var scrollValue = $(".categories-container .categories-wrapper").scrollTop();
+
+      if (scrollValue < maxScroll ) {
+        if ($(wrapper).hasClass("list"))
+        {
+          scrolled=scrollValue+280;
+        }else{
+          scrolled=scrollValue+300;
+        }
+
+  			$(".categories-container .categories-wrapper").animate({ scrollTop:  scrolled });
+      }else{
+        $(".categories-container .categories-wrapper").animate({ scrollTop:  maxScroll });
+      }
+
+      $(".categories-container .scrollUp").show();
+			});
+
+
+    $(".categories-container .scrollUp").on("click" ,function(){
+
+      if (scrolled > 0 ) {
+        var wrapper = $(".categories-container .categories-wrapper");
+
+        if ($(wrapper).hasClass("list"))
+        {
+          scrolled=scrolled-280;
+        }else{
+          scrolled=scrolled-300;
+        }
+
+				$(".categories-container .categories-wrapper").animate({ scrollTop:  scrolled });
+      }else{
+        $(".categories-container .scrollUp").hide();
+        $(".categories-container .categories-wrapper").animate({ scrollTop:  0 });
+      }
+			});
+
 });

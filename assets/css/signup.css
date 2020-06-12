@@ -884,4 +884,8 @@ textarea {
         .gallery-container .wrapper .item .delete:hover {
           background: #CF2127; }
 
+.nice-select .list {
+  max-height: 300px;
+  overflow-y: auto; }
+
 /*# sourceMappingURL=signup.css.map */

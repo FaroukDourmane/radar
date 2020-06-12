@@ -25,7 +25,7 @@ $lang_prefix = __("lang_prefix", TRUE);
           <option selected="selected" value="0"><?php __("company_category"); ?></option>
           <?php if ($categories_q->num_rows > 0) { ?>
             <?php while ( $categories_fetch = $categories_q->fetch_assoc() ) { ?>
-              <option value="<?php echo $categories_fetch["id"]; ?>" <?php echo ( fill_input("company_category") == $categories_fetch["id"] ) ? "selected" : ""; ?>> <?php echo $categories_fetch["name_$lang_prefix"] ?> </option>
+              <option value="<?php echo $categories_fetch["id"]; ?>" <?php echo ( fill_input("company_category") == $categories_fetch["id"] ) ? "selected" : ""; ?>> <img src="<?php echo $categories_fetch["image_path"] ?>" /> <?php echo $categories_fetch["name_$lang_prefix"] ?> </option>
             <?php } ?>
           <?php } ?>
       </select>

@@ -117,7 +117,7 @@ function category($id, $return=NULL)
   GLOBAL $Q;
   $id = intval($id);
 
-  $query = $Q->query("SELECT * FROM `categories` WHERE `id`='$id' ");
+  $query = $Q->query("SELECT * FROM `category` WHERE `id`='$id' ");
 
   if ( $query->num_rows > 0 )
   {
@@ -932,4 +932,14 @@ function get_category($id=NULL)
 #################################
 # END FUNCTION
 #################################
+
+function count_category_companies($category_id)
+{
+  GLOBAL $Q;
+  $query = $Q->query("select count(1) FROM `company` WHERE `category`='$category_id' ");
+  $row = $query->fetch_assoc();
+  //$total = $row;
+
+  return intval($row["count(1)"]);
+}
 ?>

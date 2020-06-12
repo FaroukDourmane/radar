@@ -111,5 +111,9 @@
     "notifications" => "Bildirimler",
     "last_view_at" => "Son görünüm",
     "unred_messages" => "Okunmamış mesajlar",
+
+    "no_companies" => "Şirket yok",
+    "companies" => "şirketler",
+    "company" => "şirket",
   ];
 ?>

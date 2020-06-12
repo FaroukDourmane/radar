@@ -122,5 +122,9 @@
     "current_password" => "كلمة المرور الحالية",
     "new_password" => "كلمة مرور جديدة",
     "new_password_confirm" => "تأكيد كلمة المرور",
+
+    "no_companies" => "لا يوجد شركات",
+    "companies" => "شركات",
+    "company" => "شركة",
   ];
 ?>

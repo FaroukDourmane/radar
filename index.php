@@ -44,7 +44,18 @@
                 <a href="#" class="hidden-link"></a>
                 <?php echo file_get_contents($category["image_path"]); ?>
                 <b> <?php echo $category["name_$lang_suffix"]; ?> </b>
-                <p> 10 نتائج </p>
+                <p style="direction:'<?php __('dir'); ?>'">
+                  <?php
+                    $count_companies = count_category_companies($category["id"]);
+
+                    if ( $count_companies == 0 ){
+                      __("no_companies");
+                    } else {
+                      echo $count_companies;
+                      echo ( $count_companies > 1 ) ? __("companies",true) : __("company",true);
+                    }
+                  ?>
+                </p>
               </div>
             <?php }} ?>
           </div>
@@ -112,16 +123,20 @@
 
       <div class="right-side">
         <div class="ads-container">
-          <?php for ($i=0; $i < 6; $i++) { ?>
+          <?php
+            if ( $ads_q->num_rows > 0 ) {
+              while ( $company = $ads_q->fetch_assoc() ) {
+                $company_category = category($company["category"]);
+          ?>
             <div class="ad">
               <a href="#" class="hidden-link"></a>
-              <img class="logo" src="assets/svg/logo.svg" />
-              <h5 class="name"> شركة رادار للعقارات </h5>
-              <p class="category"> عقارات </p>
-              <?php echo file_get_contents("assets/svg/home.svg"); ?>
+              <img class="logo" src="<?php echo $company["company_logo"]; ?>" />
+              <h5 class="name"> <?php echo $company["name"]; ?> </h5>
+              <p class="category"> <?php echo $company_category["name_$lang_suffix"] ?> </p>
+              <?php echo file_get_contents($company_category['image_path']); ?>
               <div class="abstract"></div>
             </div>
-          <?php } ?>
+          <?php }} ?>
         </div>
 
         <a href="#" class="all-ads">

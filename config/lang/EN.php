@@ -117,5 +117,9 @@
     "current_password" => "Current password",
     "new_password" => "New password",
     "new_password_confirm" => "New password confirmation",
+
+    "no_companies" => "No companies",
+    "companies" => "Companies",
+    "company" => "Company",
   ];
 ?>

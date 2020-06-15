@@ -115,5 +115,15 @@
     "no_companies" => "Şirket yok",
     "companies" => "şirketler",
     "company" => "şirket",
+
+    "work_description" => "İş tanımı",
+    "send_us_message" => "Bize mesaj gönder",
+    "fullname" => "Ad Soyad",
+    "email" => "E-posta",
+
+    "message" => "İleti",
+    "send_it" => "Gönder",
+
+    "company_page" => "Şirket sayfası",
   ];
 ?>

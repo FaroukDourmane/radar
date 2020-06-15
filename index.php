@@ -22,9 +22,7 @@
     <div class="top-ad-container">
       <div class="left-ad"></div>
 
-      <div class="main-ad">
-        إعلان رئيسي
-      </div>
+      <div class="main-ad"></div>
     </div>
 
 
@@ -141,7 +139,7 @@
                 $company_category = category($company["category"]);
           ?>
             <div class="ad">
-              <a href="#" class="hidden-link"></a>
+              <a href="company.php?id=<?php echo $company["id"]; ?>" class="hidden-link"></a>
               <img class="logo" src="<?php echo $company["company_logo"]; ?>" />
               <h5 class="name"> <?php echo $company["name"]; ?> </h5>
               <p class="category"> <?php echo $company_category["name_$lang_suffix"] ?> </p>

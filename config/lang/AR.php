@@ -126,5 +126,15 @@
     "no_companies" => "لا يوجد شركات",
     "companies" => "شركات",
     "company" => "شركة",
+
+    "work_description" => "وصف العمل",
+    "send_us_message" => "أرسل لنا رسالة",
+    "fullname" => "الإسم الكامل",
+    "email" => "البريد الإلكتروني",
+
+    "message" => "الرسالة",
+    "send_it" => "أرسل",
+
+    "company_page" => "صفحة الشركة",
   ];
 ?>

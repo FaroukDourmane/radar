@@ -118,38 +118,44 @@
 
       <p>
         <img src="assets/svg/phone-outline.svg" />
-        <?php //echo $fetch["company_logo"]; ?>
+        <?php echo $fetch["ceo_phone"]; ?>
       </p>
     </div>
     <!-- END CEO Card -->
 
     <!-- Work description -->
     <div class="description-container">
-      <h1 class="title"> <span>Work Description</span> </h1>
+      <h1 class="title"> <span><?php __("work_description"); ?></span> </h1>
       <div class="content">
-        <?php echo $fetch["work_description"]; ?>
+        <?php echo htmlspecialchars_decode(stripslashes(stripslashes($fetch["work_description"]))); ?>
       </div>
     </div>
     <!-- END Work description -->
 
     <!-- Contact Form -->
     <div class="contact-container">
-      <h1 class="title"> <span>Send us a message</span> </h1>
+      <h1 class="title"> <span><?php __("send_us_message"); ?></span> </h1>
       <form class="" action="" method="post">
-        <input type="text" name="" value="" placeholder="Name" required />
-        <input type="email" name="" value="" placeholder="Email" required />
-        <textarea name="name" required placeholder="Message"></textarea>
-        <input type="submit" name="" value="Send it" />
+        <input type="text" name="" value="" placeholder="<?php __("fullname"); ?>" required />
+        <input type="email" name="" value="" placeholder="<?php __("email"); ?>" required />
+        <textarea name="name" required placeholder="<?php __("message"); ?>"></textarea>
+        <input type="submit" name="" value="<?php __("send_it"); ?>" />
       </form>
     </div>
     <!-- END Contact Form -->
 
+    <?php
+      $map_code = htmlspecialchars_decode(stripslashes(stripslashes($fetch["map_code"])));
+      if ( check_google_maps($map_code) ) {
+    ?>
     <!-- Map container -->
     <div class="map-container">
       <div class="location-pin"> <?php echo file_get_contents("assets/svg/location.svg"); ?> </div>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d385395.558995652!2d28.731988885938588!3d41.00550052122371!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa7040068086b%3A0xe1ccfe98bc01b0d0!2sIstanbul!5e0!3m2!1sfr!2str!4v1591177835702!5m2!1sfr!2str" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      <?php echo $map_code; ?>
     </div>
     <!-- END Map -->
+    <?php } ?>
+    
   </div>
 </div>
 <?php require_once("templates/footer.php");?>

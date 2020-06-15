@@ -25,7 +25,6 @@ body, html {
       display: block;
       width: 300px;
       height: 200px;
-      line-height: 200px;
       flex-shrink: 0;
       text-align: center;
       font-size: 13px;
@@ -35,20 +34,25 @@ body, html {
       margin-right: auto;
       font-weight: 700;
       border-radius: 10px;
-      box-shadow: -10px 10px 30px 0px rgba(0, 0, 0, 0.05); }
+      box-shadow: -10px 10px 30px 0px rgba(0, 0, 0, 0.05);
+      background-image: url("../img/300-area.jpg");
+      background-size: cover;
+      background-position: top; }
     .body-container .top-ad-container .main-ad {
       width: 600px;
       height: 200px;
-      line-height: 200px;
       text-align: center;
       font-size: 13px;
       color: #777;
       font-family: "Cairo", sans-serif;
-      background: #FFF;
+      background-color: #FFF;
       margin-left: auto;
       font-weight: 700;
       border-radius: 10px;
-      box-shadow: -10px 10px 30px 0px rgba(0, 0, 0, 0.05); }
+      box-shadow: -10px 10px 30px 0px rgba(0, 0, 0, 0.05);
+      background-image: url("../img/600-area.jpg");
+      background-size: cover;
+      background-position: 80px -60px; }
   .body-container .body-wrapper {
     display: flex;
     padding: 50px 20px; }

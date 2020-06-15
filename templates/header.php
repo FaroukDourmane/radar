@@ -60,9 +60,9 @@
           <li>
              <a href="#"> <?php echo file_get_contents(__DIR__."/../assets/svg/user.svg"); ?> <?php echo $_COMPANY["name"]; ?> </a>
              <ul>
-               <li> <a href="dashboard.php"> <?php echo file_get_contents(__DIR__."/../assets/svg/settings.svg"); ?> Dashboard </a> </li>
-               <li> <a href="company.php"> <?php echo file_get_contents(__DIR__."/../assets/svg/preview.svg"); ?> Company page </a> </li>
-               <li> <a href="?log=out"> <?php echo file_get_contents(__DIR__."/../assets/svg/exit.svg"); ?> Logout </a> </li>
+               <li> <a href="dashboard.php"> <?php echo file_get_contents(__DIR__."/../assets/svg/settings.svg"); ?> <?php __("dashboard"); ?> </a> </li>
+               <li> <a href="company.php"> <?php echo file_get_contents(__DIR__."/../assets/svg/preview.svg"); ?> <?php __("company_page"); ?> </a> </li>
+               <li> <a href="?log=out"> <?php echo file_get_contents(__DIR__."/../assets/svg/exit.svg"); ?> <?php __("logout"); ?> </a> </li>
              </ul>
           </li>
         </ul>

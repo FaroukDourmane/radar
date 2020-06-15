@@ -933,6 +933,10 @@ function get_category($id=NULL)
 # END FUNCTION
 #################################
 
+
+#################################
+# COUNT HOW MANY COMPANIES IN A CATEGORY
+#################################
 function count_category_companies($category_id)
 {
   GLOBAL $Q;
@@ -942,4 +946,24 @@ function count_category_companies($category_id)
 
   return intval($row["count(1)"]);
 }
+#################################
+# END FUNCTION
+#################################
+
+
+
+#################################
+# CHECK GOOGLE MAPS IFRAME
+#################################
+function check_google_maps($input)
+{
+  if (!preg_match('/<iframe\s*src="https:\/\/www\.google\.com\/maps\/embed\?[^"]+"*\s*[^>]+>*<\/iframe>/', $input))
+  {
+    return FALSE;
+  }
+  return TRUE;
+}
+#################################
+# END FUNCTION
+#################################
 ?>

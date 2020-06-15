@@ -121,5 +121,15 @@
     "no_companies" => "No companies",
     "companies" => "Companies",
     "company" => "Company",
+
+    "work_description" => "Work description",
+    "send_us_message" => "Send us a message",
+    "fullname" => "Full name",
+    "email" => "Email",
+
+    "message" => "Message",
+    "send_it" => "Send it",
+
+    "company_page" => "Company page",
   ];
 ?>
